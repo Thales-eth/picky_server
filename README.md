@@ -7,6 +7,7 @@
 | /api/photos/delete/:photo_id             | DELETE               | {message: 'Photo deleted'}                           | Delete single photo from the DB     |
 | /api/users/list             | GET               | [users]                           | Get all users from the DB     |
 | /api/users/getOneUser/:user_id    | GET               | {user}                            | Get single user from DB       |
+| /api/users/getLoggedUser    | GET               | {user}                            | Get logged (authenticated) user from DB       |
 | /api/users/edit/:user_id      | PUT               | {user}                            | Edit one user from DB         |
 | /api/users/delete/:user_id     | DELETE            | {message: 'User deleted'}         | Delete a user                 |
 | /api/auth/create            | POST              | {message: 'New User created!'}    | Create a new user             |
