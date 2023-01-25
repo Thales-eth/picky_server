@@ -30,7 +30,12 @@ const getOnePhoto = (req, res, next) => {
 
 // CLOUDINARY ROUTE
 const uploadPhoto = (req, res, next) => {
+    if (!req.file) {
+        res.status(500).json({ errorMessage: 'Error cargando el archivo' })
+        return
+    }
 
+    res.json({ cloudinary_url: req.file.path })
 }
 
 const editPhoto = (req, res, next) => {
