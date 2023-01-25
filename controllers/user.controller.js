@@ -1,4 +1,5 @@
 const User = require('../models/User.model')
+const { isValid } = require('../utils/isValidId')
 
 const getUsers = (req, res, next) => {
     User
@@ -13,6 +14,13 @@ const getUsers = (req, res, next) => {
 
 const getOneUser = (req, res, next) => {
     const { user_id } = req.params
+
+    const validUserId = isValid(user_id)
+
+    if (!validUserId) {
+        res.status(400).json({ err: 'Sorry, this is not a valid Mongo Id' })
+        return
+    }
 
     User
         .findById(user_id)
@@ -38,6 +46,13 @@ const editUser = (req, res, next) => {
     const { user_id } = req.params
     const { username, email, password, avatar, personalPhotos, favoritePhotos } = req.body
 
+    const validUserId = isValid(user_id)
+
+    if (!validUserId) {
+        res.status(400).json({ err: 'Sorry, this is not a valid Mongo Id' })
+        return
+    }
+
     User
         .findByIdAndUpdate(user_id, { username, email, password, avatar, personalPhotos, favoritePhotos }, { new: true })
         .select("-createdAt -updatedAt -__v")
@@ -49,6 +64,14 @@ const editUser = (req, res, next) => {
 
 const deleteUser = (req, res, next) => {
     const { user_id: id } = req.params
+
+
+    const validUserId = isValid(id)
+
+    if (!validUserId) {
+        res.status(400).json({ err: 'Sorry, this is not a valid Mongo Id' })
+        return
+    }
 
     User
         .findByIdAndDelete(id)

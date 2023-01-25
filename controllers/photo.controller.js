@@ -19,6 +19,10 @@ const getOnePhoto = (req, res, next) => {
         .findById(photo_id)
         .select("-createdAt -updatedAt -__v")
         .then(photo => {
+            if (!photo) {
+                res.status(404).json({ err: "Photo does not longer exist or was not found :(" })
+                return
+            }
             res.status(200).json(photo)
         })
         .catch(err => res.status(500).json({ error: err.message }))
