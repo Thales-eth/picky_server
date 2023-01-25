@@ -10,7 +10,7 @@ const photoSchema = new Schema(
     {
         timestamps: true
     }
-);
+)
 
 const Photo = model("Photo", photoSchema)
 
