@@ -4,6 +4,7 @@ const getUsers = (req, res, next) => {
     User
         .find()
         .sort({ createdAt: -1 })
+        .lean()
         .then(users => {
             res.status(200).json(users)
         })
