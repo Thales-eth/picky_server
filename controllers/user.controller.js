@@ -35,10 +35,10 @@ const getLoggedUser = (req, res, next) => {
 
 const editUser = (req, res, next) => {
     const { user_id } = req.params
-    const { username, email, password, points, favoriteAnimal, avatar } = req.body
+    const { username, email, password, avatar, personalPhotos, favoritePhotos } = req.body
 
     User
-        .findByIdAndUpdate(user_id, { username, email, password, points, favoriteAnimal, avatar }, { new: true })
+        .findByIdAndUpdate(user_id, { username, email, password, avatar, personalPhotos, favoritePhotos }, { new: true })
         .select("-createdAt -updatedAt -__v")
         .then(user => {
             res.status(200).json(user)
