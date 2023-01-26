@@ -1,4 +1,5 @@
 const User = require('../models/User.model')
+const Photo = require('../models/Photo.model')
 const { isValid } = require('../utils/isValidId')
 
 const getUsers = (req, res, next) => {
@@ -62,6 +63,30 @@ const editUser = (req, res, next) => {
         .catch(err => res.status(500).json({ error: err.message }))
 }
 
+const editLikes = (req, res, next) => {
+    const { photo_id } = req.params
+    const { id } = req.user
+
+    User
+        .findByIdAndUpdate(id, { $addToSet: { favoritePhotos: photo_id } }, { new: true })
+        .then(user => {
+            res.status(200).json(user)
+        })
+        .catch(err => res.status(500).json({ error: err.message }))
+}
+
+const dislikePhoto = (req, res, next) => {
+    const { photo_id } = req.params
+    const { id } = req.user
+
+    User
+        .findByIdAndUpdate(id, { $pull: { favoritePhotos: photo_id } }, { new: true })
+        .then(user => {
+            res.status(200).json(user)
+        })
+        .catch(err => res.status(500).json({ error: err.message }))
+}
+
 const deleteUser = (req, res, next) => {
     const { user_id: id } = req.params
 
@@ -81,4 +106,4 @@ const deleteUser = (req, res, next) => {
         .catch(err => res.status(500).json({ error: err.message }))
 }
 
-module.exports = { getUsers, getOneUser, getLoggedUser, editUser, deleteUser }
+module.exports = { getUsers, getOneUser, getLoggedUser, editUser, editLikes, dislikePhoto, deleteUser }
