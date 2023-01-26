@@ -1,4 +1,5 @@
 const Photo = require('../models/Photo.model')
+const User = require('../models/User.model')
 
 const getPhotos = (req, res, next) => {
     Photo
@@ -9,6 +10,38 @@ const getPhotos = (req, res, next) => {
         .then(photos => {
             res.status(200).json(photos)
         })
+        .catch(err => res.status(500).json({ error: err.message }))
+}
+
+const getLikedPhotos = (req, res, next) => {
+    const { user_id } = req.params
+
+    User
+        .findById(user_id)
+        .populate({
+            path: "favoritePhotos",
+            select: "url"
+        })
+        .then(user => {
+            return user.favoritePhotos
+        })
+        .then(photos => res.status(200).json(photos))
+        .catch(err => res.status(500).json({ error: err.message }))
+}
+
+const getPersonalPhotos = (req, res, next) => {
+    const { user_id } = req.params
+
+    User
+        .findById(user_id)
+        .populate({
+            path: "personalPhotos",
+            select: "url"
+        })
+        .then(user => {
+            return user.personalPhotos
+        })
+        .then(photos => res.status(200).json(photos))
         .catch(err => res.status(500).json({ error: err.message }))
 }
 
@@ -29,13 +62,24 @@ const getOnePhoto = (req, res, next) => {
 }
 
 // CLOUDINARY ROUTE
+// AL SUBIR LA FOTO DEBERÍA 1 GUARDARSE COMO NUEVA FOTO, 2 GUARDARSE EN MIS FOTOS
 const uploadPhoto = (req, res, next) => {
     if (!req.file) {
         res.status(500).json({ errorMessage: 'Error cargando el archivo' })
         return
     }
 
-    res.json({ cloudinary_url: req.file.path })
+    const { id } = req.user
+    let newPhoto = ""
+
+    Photo
+        .create({ url: req.file.path })
+        .then(photo => {
+            newPhoto = photo
+            return User.findByIdAndUpdate(id, { $addToSet: { personalPhotos: photo._id } }, { new: true })
+        })
+        .then(() => res.status(200).json(newPhoto))
+        .catch(err => res.status(500).json({ error: err.message }))
 }
 
 const editPhoto = (req, res, next) => {
@@ -60,4 +104,4 @@ const deletePhoto = (req, res, next) => {
         .catch(err => res.status(500).json({ error: err.message }))
 }
 
-module.exports = { getPhotos, getOnePhoto, uploadPhoto, editPhoto, deletePhoto }
+module.exports = { getPhotos, getLikedPhotos, getPersonalPhotos, getOnePhoto, uploadPhoto, editPhoto, deletePhoto }
