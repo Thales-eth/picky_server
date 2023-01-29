@@ -8,9 +8,12 @@
 | /api/photos/edit/:photo_id             | PUT               | {photo}                           | Edit single photo from the DB     |
 | /api/photos/delete/:photo_id             | DELETE               | {message: 'Photo deleted'}                           | Delete single photo from the DB     |
 | /api/users/list             | GET               | [users]                           | Get all users from the DB     |
+| /api/users/friends/:user_id             | GET               | [friends]                           | Get all user friends from the DB     |
 | /api/users/getOneUser/:user_id    | GET               | {user}                            | Get single user from DB       |
 | /api/users/getLoggedUser    | GET               | {user}                            | Get logged (authenticated) user from DB       |
 | /api/users/edit/:user_id      | PUT               | {user}                            | Edit one user from DB         |
+| /api/users/follow/:user_id      | PUT               | {user}                            | Add User to friends         |
+| /api/users/unfollow/:user_id      | PUT               | {user}                            | Unfollow user from friends         |
 | /api/users/like/:photo_id      | PUT               | {user}                            | Edit user likes from DB         |
 | /api/users/dislike/:photo_id      | PUT               | {user}                            | Dislike photo and edit user likes from DB         |
 | /api/users/delete/:user_id     | DELETE            | {message: 'User deleted'}         | Delete a user                 |

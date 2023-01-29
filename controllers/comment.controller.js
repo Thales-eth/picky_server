@@ -24,6 +24,15 @@ const getCommentedPhoto = (req, res, next) => {
         .catch(err => res.status(500).json({ error: err.message }))
 }
 
+const getComment = (req, res, next) => {
+    const { comment_id } = req.params
+
+    Comment
+        .findById(comment_id)
+        .then(comment => res.status(200).json(comment))
+        .catch(err => res.status(500).json({ error: err.message }))
+}
+
 const createPhoto = (req, res, next) => {
     const { description } = req.body
     const { id } = req.user
@@ -35,7 +44,9 @@ const createPhoto = (req, res, next) => {
             return Comment.create({ description, author: id })
         })
         .then(comment => {
-            return Photo.findByIdAndUpdate(photo_id, { $push: { comments: comment._id } }, { new: true })
+            return Photo
+                .findByIdAndUpdate(photo_id, { $push: { comments: comment._id } }, { new: true })
+                .populate("comments")
         })
         .then(photo => res.status(200).json(photo))
         .catch(err => res.status(500).json({ error: err.message }))
@@ -54,17 +65,20 @@ const editComment = (req, res, next) => {
 const deleteComment = (req, res, next) => {
     const { comment_id } = req.params
     const { photo_id } = req.params
+    console.log("LA ID=>", photo_id)
 
     Comment
         .findByIdAndDelete(comment_id)
         .then((comment) => {
-            return Photo.findByIdAndUpdate(photo_id, { $pull: { comments: comment._id } }, { new: true })
+            console.log("AQUÍ ENTRO")
+            return Photo
+                .findByIdAndUpdate(photo_id, { $pull: { comments: comment._id } }, { new: true })
+                .populate("comments")
         })
         .then((photo) => {
-            // res.status(200).json({ message: "comment deleted" })
-            res.status(200).json(photo)
+            res.status(200).json(photo.comments)
         })
         .catch(err => res.status(500).json({ error: err.message }))
 }
 
-module.exports = { getCommentedPhoto, createPhoto, editComment, deleteComment }
+module.exports = { getCommentedPhoto, getComment, createPhoto, editComment, deleteComment }

@@ -61,8 +61,6 @@ const getOnePhoto = (req, res, next) => {
         .catch(err => res.status(500).json({ error: err.message }))
 }
 
-// CLOUDINARY ROUTE
-// AL SUBIR LA FOTO DEBERÍA 1 GUARDARSE COMO NUEVA FOTO, 2 GUARDARSE EN MIS FOTOS
 const uploadPhoto = (req, res, next) => {
     if (!req.file) {
         res.status(500).json({ errorMessage: 'Error cargando el archivo' })
@@ -80,6 +78,15 @@ const uploadPhoto = (req, res, next) => {
         })
         .then(() => res.status(200).json(newPhoto))
         .catch(err => res.status(500).json({ error: err.message }))
+}
+
+const uploadAvatar = (req, res, next) => {
+    if (!req.file) {
+        res.status(500).json({ errorMessage: 'Error cargando el archivo' })
+        return
+    }
+
+    res.status(200).json(req.file.path)
 }
 
 const editPhoto = (req, res, next) => {
@@ -104,4 +111,4 @@ const deletePhoto = (req, res, next) => {
         .catch(err => res.status(500).json({ error: err.message }))
 }
 
-module.exports = { getPhotos, getLikedPhotos, getPersonalPhotos, getOnePhoto, uploadPhoto, editPhoto, deletePhoto }
+module.exports = { getPhotos, getLikedPhotos, getPersonalPhotos, getOnePhoto, uploadPhoto, uploadAvatar, editPhoto, deletePhoto }
