@@ -5,7 +5,11 @@ const photoSchema = new Schema(
         url: {
             type: String
         },
-        comments: [{ type: Schema.Types.ObjectId, ref: "Comment" }]
+        comments: [{ type: Schema.Types.ObjectId, ref: "Comment" }],
+        author: {
+            type: Schema.Types.ObjectId,
+            ref: "User"
+        }
     },
     {
         timestamps: true

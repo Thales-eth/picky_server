@@ -4,8 +4,6 @@ const validateToken = (req, res, next) => {
 
     const { authorization } = req.headers
 
-    console.log("EL BODY ===>", req.body)
-
     console.log("QUÉ LLEGA AQUÍ???", req.headers)
 
     if (authorization) {

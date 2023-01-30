@@ -38,16 +38,28 @@ const getFriendsPhotos = (req, res, next) => {
         .findById(id)
         .populate({
             path: "friends",
-            select: "personalPhotos username",
+            select: "personalPhotos username avatar",
             populate: {
                 path: "personalPhotos",
-                select: "url createdAt"
+                select: "url createdAt",
+                populate: {
+                    path: "author",
+                    select: "avatar username"
+                }
             }
         })
         .then(user => {
             return user.friends
         })
-        .then(friends => res.status(200).json(friends))
+        .then(friends => {
+            const allPhotos = friends.map(({ personalPhotos }) => personalPhotos).flat(1).sort((a, b) => {
+                return (new Date(b.createdAt) - new Date(a.createdAt))
+            })
+            return allPhotos
+        })
+        .then(photos => {
+            res.status(200).json(photos)
+        })
         .catch(err => res.status(500).json({ error: err.message }))
 }
 
@@ -107,7 +119,8 @@ const followUser = (req, res, next) => {
 
     User
         .findByIdAndUpdate(id, { $addToSet: { friends: user_id } }, { new: true })
-        .then(user => res.status(200).json(user))
+        .populate("friends")
+        .then(user => res.status(200).json(user.friends))
         .catch(err => res.status(500).json({ error: err.message }))
 }
 
@@ -117,7 +130,8 @@ const unfollowUser = (req, res, next) => {
 
     User
         .findByIdAndUpdate(id, { $pull: { friends: user_id } }, { new: true })
-        .then(user => res.status(200).json(user))
+        .populate("friends")
+        .then(user => res.status(200).json(user.friends))
         .catch(err => res.status(500).json({ error: err.message }))
 }
 

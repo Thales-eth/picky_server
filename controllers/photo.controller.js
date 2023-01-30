@@ -71,7 +71,7 @@ const uploadPhoto = (req, res, next) => {
     let newPhoto = ""
 
     Photo
-        .create({ url: req.file.path })
+        .create({ url: req.file.path, author: id })
         .then(photo => {
             newPhoto = photo
             return User.findByIdAndUpdate(id, { $addToSet: { personalPhotos: photo._id } }, { new: true })
