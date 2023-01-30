@@ -1,0 +1,3357 @@
+{
+	"info": {
+		"_postman_id": "9adf27b7-2abd-4c12-8ce9-470948cdb589",
+		"name": "Picky",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21704274"
+	},
+	"item": [
+		{
+			"name": "Photos",
+			"item": [
+				{
+					"name": "Get All photos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/photos/list",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"photos",
+								"list"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful List Query",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/photos/list",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"photos",
+										"list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1175"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"497-AKx2Qcz56PUmNSHiRMK4DeB6RtY\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jan 2023 11:23:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"63d1108d408c23d049b06c82\",\n        \"url\": \"https://diariobitcoin.b-cdn.net/wp-content/uploads/2021/10/shiba-inu-unsplash-min-1.jpg\",\n        \"comments\": []\n    },\n    {\n        \"_id\": \"63d1108d408c23d049b06c83\",\n        \"url\": \"https://s10.s3c.es/imag/_v0/770x420/b/9/1/490x_shiba-inu-alamy.jpg\",\n        \"comments\": []\n    },\n    {\n        \"_id\": \"63d1108d408c23d049b06c7e\",\n        \"url\": \"https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2021/11/shiba-inu-2534373.jpg?tf=3840x\",\n        \"comments\": []\n    },\n    {\n        \"_id\": \"63d1108d408c23d049b06c7f\",\n        \"url\": \"https://s.yimg.com/ny/api/res/1.2/L6WhrydFxHfu1lKx9wVwXA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTM1MA--/https://media.zenfs.com/es/benzinga_espana_844/75c8aa0beca2d47d9ab50c550f8b68a9\",\n        \"comments\": []\n    },\n    {\n        \"_id\": \"63d1108d408c23d049b06c80\",\n        \"url\": \"https://s.yimg.com/ny/api/res/1.2/b.HC.xyFmHmxQCn0dmMxKg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTM1Mg--/https://media.zenfs.com/en/investorplace_417/bd6c221b08cdc41462cb823d55a95eb0\",\n        \"comments\": []\n    },\n    {\n        \"_id\": \"63d1108d408c23d049b06c81\",\n        \"url\": \"https://livecoins.com.br/wp-content/uploads/2021/10/Shiba-Inu.jpg\",\n        \"comments\": []\n    },\n    {\n        \"_id\": \"63d1108d408c23d049b06c7d\",\n        \"url\": \"https://www.hogarmania.com/archivos/202208/mascotas-shiba-inu-xl-1280x720x80xX.jpg\",\n        \"comments\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Liked Photos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/photos/list/likedPhotos/:user_id",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"photos",
+								"list",
+								"likedPhotos",
+								":user_id"
+							],
+							"variable": [
+								{
+									"key": "user_id",
+									"value": "63d29164e0d7b9c9d6b33ada"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Liked Photos Query",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/photos/list/likedPhotos/:user_id",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"photos",
+										"list",
+										"likedPhotos",
+										":user_id"
+									],
+									"variable": [
+										{
+											"key": "user_id",
+											"value": "63d1035e57847d4fe1e7c9c2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "111"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"6f-MZB4oPqnG0v5l/Dj5fVrdRCtQ40\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Jan 2023 11:45:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"63d1108d408c23d049b06c83\",\n        \"url\": \"https://s10.s3c.es/imag/_v0/770x420/b/9/1/490x_shiba-inu-alamy.jpg\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Personal Photos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/photos/list/personalPhotos/:user_id",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"photos",
+								"list",
+								"personalPhotos",
+								":user_id"
+							],
+							"variable": [
+								{
+									"key": "user_id",
+									"value": "63d29164e0d7b9c9d6b33ada"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Personal Photos from User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/photos/list/personalPhotos/:user_id",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"photos",
+										"list",
+										"personalPhotos",
+										":user_id"
+									],
+									"variable": [
+										{
+											"key": "user_id",
+											"value": "63d1035e57847d4fe1e7c9c2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "145"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"91-LNqdWvuPd6adRIKybm7lgZIurU4\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Jan 2023 11:47:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"63d24cc643cf6994cfc7cdae\",\n        \"url\": \"https://res.cloudinary.com/dagndlfhj/image/upload/v1674726598/movie-gallery/zov3uocioxqsmucqbbbn.jpg\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get One Photo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/photos/getOnePhoto/:photo_id",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"photos",
+								"getOnePhoto",
+								":photo_id"
+							],
+							"variable": [
+								{
+									"key": "photo_id",
+									"value": "63d24cc643cf6994cfc7cdae"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Single Photo Query",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/photos//getOnePhoto/:photo_id",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"photos",
+										"",
+										"getOnePhoto",
+										":photo_id"
+									],
+									"variable": [
+										{
+											"key": "photo_id",
+											"value": "63d1108d408c23d049b06c82"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "144"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"90-6aP0RpymYKGTcfUYW5QroCcy+Vw\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jan 2023 11:24:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"63d1108d408c23d049b06c82\",\n    \"url\": \"https://diariobitcoin.b-cdn.net/wp-content/uploads/2021/10/shiba-inu-unsplash-min-1.jpg\",\n    \"comments\": []\n}"
+						},
+						{
+							"name": "Deleted Photo Query Attempt",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/photos//getOnePhoto/:photo_id",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"photos",
+										"",
+										"getOnePhoto",
+										":photo_id"
+									],
+									"variable": [
+										{
+											"key": "photo_id",
+											"value": "63d1108d408c23d049b06c80"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "57"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"39-L/bX7VyFcu5SmRV4t5yW0mlyFQs\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jan 2023 11:31:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"err\": \"Photo does not longer exist or was not found :(\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Upload Photo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imlyb25AZ21haWwuY29tIiwiaWF0IjoxNjc1MDU0MTQyLCJleHAiOjE2NzUyMjY5NDIsInN1YiI6IjYzZDY2YTQ1MjQzYTg4YjcwMjhjMTk5MiJ9.vdWdpsYuD0n72yIa85G4K8NZheUaXgtMh-GYEMiwy8k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imageUrl",
+									"type": "file",
+									"src": "/C:/Users/spani/OneDrive/Pictures/1040937470.jpg"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/photos/upload",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"photos",
+								"upload"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful photo upload",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "imageUrl",
+											"type": "file",
+											"src": "/C:/Users/spani/OneDrive/Pictures/0qhAVe7VJ.jpeg"
+										},
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/photos/upload",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"photos",
+										"upload"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "121"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"79-hkDRdy9LpjJyoSwZ1sVPnmxiJ18\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Jan 2023 09:42:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"cloudinary_url\": \"https://res.cloudinary.com/dagndlfhj/image/upload/v1674726124/movie-gallery/biwkxkjtz4entrlzgwq2.jpg\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit One Photo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "url",
+									"value": "https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg",
+									"type": "text"
+								},
+								{
+									"key": "comments",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/photos/edit/:photo_id",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"photos",
+								"edit",
+								":photo_id"
+							],
+							"variable": [
+								{
+									"key": "photo_id",
+									"value": "63d1108d408c23d049b06c82"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Photo Edit",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "url",
+											"value": "https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg",
+											"type": "text"
+										},
+										{
+											"key": "comments",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/photos/edit/:photo_id",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"photos",
+										"edit",
+										":photo_id"
+									],
+									"variable": [
+										{
+											"key": "photo_id",
+											"value": "63d1108d408c23d049b06c82"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "156"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"9c-boHOYz7zWoFpgvw2Mlel183+cAc\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jan 2023 11:29:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"63d1108d408c23d049b06c82\",\n    \"url\": \"https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg\",\n    \"comments\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete One Photo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/photos/delete/:photo_id",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"photos",
+								"delete",
+								":photo_id"
+							],
+							"variable": [
+								{
+									"key": "photo_id",
+									"value": "63d74c7b2c9be5c96168a032"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Photo Success Message",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/photos//delete/:photo_id",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"photos",
+										"",
+										"delete",
+										":photo_id"
+									],
+									"variable": [
+										{
+											"key": "photo_id",
+											"value": "63d1108d408c23d049b06c80"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "37"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"25-V7TCn/DRgy7AOE4K5z6cH6hyhZs\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jan 2023 11:29:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"Photo successfully deleted!\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "List All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/users/list",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"users",
+								"list"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "All Users sorted by creation",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/users/list",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"users",
+										"list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1301"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"515-S/NKSk1salZQDnrfSdZxEtg7lVo\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Jan 2023 11:25:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"63d2456490c1931df3cfde10\",\n        \"username\": \"cat\",\n        \"email\": \"kitty@gmail.com\",\n        \"password\": \"$2a$10$L/6eaQgihLDCjaC7WbhYT.n2W4/Alxma/g1iGlWY9MnPlOn9O9P.O\",\n        \"avatar\": \"https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1143&q=80\",\n        \"personalPhotos\": [],\n        \"favoritePhotos\": [],\n        \"createdAt\": \"2023-01-26T09:18:28.356Z\",\n        \"updatedAt\": \"2023-01-26T09:18:28.356Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"63d109edeadffdbc38baee2c\",\n        \"username\": \"factoriaF5\",\n        \"email\": \"factoriaf5@gmail.com\",\n        \"password\": \"$2a$10$MGtyDFNqLArKrliDH9Rgx.NJ1ho.P4v4SzZh6i8UPf04LW12F8bly\",\n        \"avatar\": \"https://femcoders.factoriaf5.org/wp-content/uploads/2021/12/factoria-web.png\",\n        \"personalPhotos\": [],\n        \"favoritePhotos\": [],\n        \"createdAt\": \"2023-01-25T10:52:29.165Z\",\n        \"updatedAt\": \"2023-01-25T11:02:32.755Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"63d1035e57847d4fe1e7c9c2\",\n        \"username\": \"goblin729\",\n        \"email\": \"goblin729@gmail.com\",\n        \"password\": \"$2a$10$MXUmVG88XQt4E9jJhuzqj.Ynz03PkkOmFSQIOhMOcWaIjCmtXEFUC\",\n        \"avatar\": \"https://d.newsweek.com/en/full/2144443/mick-grumpy-cat-20-kitten.png?w=1600&h=1600&q=88&f=93167740fdd6f9a86a9c50ccccc27f7a\",\n        \"personalPhotos\": [\n            \"63d24cc643cf6994cfc7cdae\"\n        ],\n        \"favoritePhotos\": [\n            \"63d1108d408c23d049b06c83\"\n        ],\n        \"createdAt\": \"2023-01-25T10:24:30.157Z\",\n        \"updatedAt\": \"2023-01-26T09:49:58.260Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get All Friends Photos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlheWlAZ21haWwuY29tIiwiaWF0IjoxNjc0OTk3MTY3LCJleHAiOjE2NzUxNjk5NjcsInN1YiI6IjYzZDI5MTY0ZTBkN2I5YzlkNmIzM2FkYSJ9.wJAlSFHyJNhDWj07jtoz_Od385xzgSxrd6Px48fKg3k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/users/list/friendsPhotos",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"users",
+								"list",
+								"friendsPhotos"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful List Query",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/photos/list",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"photos",
+										"list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1175"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"497-AKx2Qcz56PUmNSHiRMK4DeB6RtY\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jan 2023 11:23:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"63d1108d408c23d049b06c82\",\n        \"url\": \"https://diariobitcoin.b-cdn.net/wp-content/uploads/2021/10/shiba-inu-unsplash-min-1.jpg\",\n        \"comments\": []\n    },\n    {\n        \"_id\": \"63d1108d408c23d049b06c83\",\n        \"url\": \"https://s10.s3c.es/imag/_v0/770x420/b/9/1/490x_shiba-inu-alamy.jpg\",\n        \"comments\": []\n    },\n    {\n        \"_id\": \"63d1108d408c23d049b06c7e\",\n        \"url\": \"https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2021/11/shiba-inu-2534373.jpg?tf=3840x\",\n        \"comments\": []\n    },\n    {\n        \"_id\": \"63d1108d408c23d049b06c7f\",\n        \"url\": \"https://s.yimg.com/ny/api/res/1.2/L6WhrydFxHfu1lKx9wVwXA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTM1MA--/https://media.zenfs.com/es/benzinga_espana_844/75c8aa0beca2d47d9ab50c550f8b68a9\",\n        \"comments\": []\n    },\n    {\n        \"_id\": \"63d1108d408c23d049b06c80\",\n        \"url\": \"https://s.yimg.com/ny/api/res/1.2/b.HC.xyFmHmxQCn0dmMxKg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTM1Mg--/https://media.zenfs.com/en/investorplace_417/bd6c221b08cdc41462cb823d55a95eb0\",\n        \"comments\": []\n    },\n    {\n        \"_id\": \"63d1108d408c23d049b06c81\",\n        \"url\": \"https://livecoins.com.br/wp-content/uploads/2021/10/Shiba-Inu.jpg\",\n        \"comments\": []\n    },\n    {\n        \"_id\": \"63d1108d408c23d049b06c7d\",\n        \"url\": \"https://www.hogarmania.com/archivos/202208/mascotas-shiba-inu-xl-1280x720x80xX.jpg\",\n        \"comments\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "List All Friends",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/users/friends/:user_id",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"users",
+								"friends",
+								":user_id"
+							],
+							"variable": [
+								{
+									"key": "user_id",
+									"value": "63d29164e0d7b9c9d6b33ada"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Friends List",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/users/friends/:user_id",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"users",
+										"friends",
+										":user_id"
+									],
+									"variable": [
+										{
+											"key": "user_id",
+											"value": "63d1035e57847d4fe1e7c9c2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "370"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"172-2BNgfRN2OqxfxiVqynmHTEHcO+4\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Jan 2023 12:41:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"63d2456490c1931df3cfde10\",\n        \"username\": \"cat\",\n        \"avatar\": \"https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1143&q=80\"\n    },\n    {\n        \"_id\": \"63d109edeadffdbc38baee2c\",\n        \"username\": \"factoriaF5\",\n        \"avatar\": \"https://femcoders.factoriaf5.org/wp-content/uploads/2021/12/factoria-web.png\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get User by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/users/getOneUser/:user_id",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"users",
+								"getOneUser",
+								":user_id"
+							],
+							"variable": [
+								{
+									"key": "user_id",
+									"value": "63d492a3393b2fab107073ea"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful One User query",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/users/getOneUser/:user_id",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"users",
+										"getOneUser",
+										":user_id"
+									],
+									"variable": [
+										{
+											"key": "user_id",
+											"value": "63d109edeadffdbc38baee2c"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "455"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1c7-l3Xm9ff4U6F28DSIlvO7gyyF+2s\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jan 2023 10:54:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"63d109edeadffdbc38baee2c\",\n    \"username\": \"factoria\",\n    \"email\": \"factoria@gmail.com\",\n    \"password\": \"$2a$10$MGtyDFNqLArKrliDH9Rgx.NJ1ho.P4v4SzZh6i8UPf04LW12F8bly\",\n    \"avatar\": \"https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1143&q=80\",\n    \"personalPhotos\": [],\n    \"favoritePhotos\": [],\n    \"createdAt\": \"2023-01-25T10:52:29.165Z\",\n    \"updatedAt\": \"2023-01-25T10:52:29.165Z\",\n    \"__v\": 0\n}"
+						},
+						{
+							"name": "Invalid Mongo ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/users/getOneUser/:user_id",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"users",
+										"getOneUser",
+										":user_id"
+									],
+									"variable": [
+										{
+											"key": "user_id",
+											"value": "1234"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "45"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2d-3QYa+Pmlg5jbx9JCrkCAg2a7UsI\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jan 2023 11:37:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"err\": \"Sorry, this is not a valid Mongo Id\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Logged User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlheWlAZ21haWwuY29tIiwiaWF0IjoxNjc0NzQ0MjE0LCJleHAiOjE2NzQ5MTcwMTQsInN1YiI6IjYzZDI5MTY0ZTBkN2I5YzlkNmIzM2FkYSJ9.VR7JAXO3KFLznKuJOQ4NOND9qkywvUMBkPdDOX5LEzw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/users/getLoggedUser",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"users",
+								"getLoggedUser"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Authenticated User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/users/getLoggedUser",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"users",
+										"getLoggedUser"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "335"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"14f-BipuSImmXG3BLa3EF5B32ZGTAA4\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jan 2023 10:56:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"63d1035e57847d4fe1e7c9c2\",\n    \"username\": \"goblin729\",\n    \"email\": \"goblin729@gmail.com\",\n    \"password\": \"$2a$10$MXUmVG88XQt4E9jJhuzqj.Ynz03PkkOmFSQIOhMOcWaIjCmtXEFUC\",\n    \"avatar\": \"https://d.newsweek.com/en/full/2144443/mick-grumpy-cat-20-kitten.png?w=1600&h=1600&q=88&f=93167740fdd6f9a86a9c50ccccc27f7a\",\n    \"personalPhotos\": [],\n    \"favoritePhotos\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Like Photo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZhY3RvcmlhZjVAZ21haWwuY29tIiwiaWF0IjoxNjc1MDI4MDAwLCJleHAiOjE2NzUyMDA4MDAsInN1YiI6IjYzZDEwOWVkZWFkZmZkYmMzOGJhZWUyYyJ9.mC39wHRiZ0HbPGSYvcRc90hzTy6-zhpEgmontT1yAB8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/users/like/:photo_id",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"users",
+								"like",
+								":photo_id"
+							],
+							"variable": [
+								{
+									"key": "photo_id",
+									"value": "63d51a41bc5836b23ecd25b0"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Photo Like",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/users/like/:photo_id",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"users",
+										"like",
+										":photo_id"
+									],
+									"variable": [
+										{
+											"key": "photo_id",
+											"value": "63d1108d408c23d049b06c83"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "474"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1da-NSgDEjeYxyb/Px9Ug7vigr3Uv/g\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Jan 2023 09:32:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"63d1035e57847d4fe1e7c9c2\",\n    \"username\": \"goblin729\",\n    \"email\": \"goblin729@gmail.com\",\n    \"password\": \"$2a$10$MXUmVG88XQt4E9jJhuzqj.Ynz03PkkOmFSQIOhMOcWaIjCmtXEFUC\",\n    \"avatar\": \"https://d.newsweek.com/en/full/2144443/mick-grumpy-cat-20-kitten.png?w=1600&h=1600&q=88&f=93167740fdd6f9a86a9c50ccccc27f7a\",\n    \"personalPhotos\": [],\n    \"favoritePhotos\": [\n        \"63d1108d408c23d049b06c82\",\n        \"63d1108d408c23d049b06c83\"\n    ],\n    \"createdAt\": \"2023-01-25T10:24:30.157Z\",\n    \"updatedAt\": \"2023-01-26T09:32:42.771Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Dislike Photo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvYmxpbjcyOUBnbWFpbC5jb20iLCJpYXQiOjE2NzQ3MjU0MDMsImV4cCI6MTY3NDg5ODIwMywic3ViIjoiNjNkMTAzNWU1Nzg0N2Q0ZmUxZTdjOWMyIn0.N-49jMeXl26CTl0hAq7NRYbi_AjpWaE0VpZibePiYmQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/users/dislike/:photo_id",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"users",
+								"dislike",
+								":photo_id"
+							],
+							"variable": [
+								{
+									"key": "photo_id",
+									"value": "63d1108d408c23d049b06c82"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "factoriaF6d",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "factoriaF5@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "avatar",
+									"value": "https://femcoders.factoriaf5.org/wp-content/uploads/2021/12/factoria-web.png",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/users/edit/:user_id",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"users",
+								"edit",
+								":user_id"
+							],
+							"variable": [
+								{
+									"key": "user_id",
+									"value": "63d109edeadffdbc38baee2c"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful User Edit",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "factoriaF5",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "factoriaF5@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "avatar",
+											"value": "https://femcoders.factoriaf5.org/wp-content/uploads/2021/12/factoria-web.png",
+											"type": "text"
+										},
+										{
+											"key": "personalPhotos",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "favoritePhotos",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/users/edit/:user_id",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"users",
+										"edit",
+										":user_id"
+									],
+									"variable": [
+										{
+											"key": "user_id",
+											"value": "63d109edeadffdbc38baee2c"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Invalid Mongo Id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "factoriaF5",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "factoriaF5@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "avatar",
+											"value": "https://femcoders.factoriaf5.org/wp-content/uploads/2021/12/factoria-web.png",
+											"type": "text"
+										},
+										{
+											"key": "personalPhotos",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "favoritePhotos",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/users/edit/:user_id",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"users",
+										"edit",
+										":user_id"
+									],
+									"variable": [
+										{
+											"key": "user_id",
+											"value": "63d109edeadffdbc38b"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "45"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2d-3QYa+Pmlg5jbx9JCrkCAg2a7UsI\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jan 2023 11:39:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"err\": \"Sorry, this is not a valid Mongo Id\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Follow User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZhY3RvcmlhZjVAZ21haWwuY29tIiwiaWF0IjoxNjc1MDI4MDAwLCJleHAiOjE2NzUyMDA4MDAsInN1YiI6IjYzZDEwOWVkZWFkZmZkYmMzOGJhZWUyYyJ9.mC39wHRiZ0HbPGSYvcRc90hzTy6-zhpEgmontT1yAB8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/users/follow/:user_id",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"users",
+								"follow",
+								":user_id"
+							],
+							"variable": [
+								{
+									"key": "user_id",
+									"value": "63d2456490c1931df3cfde10"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful User Follow",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "factoriaF5",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "factoriaF5@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "avatar",
+											"value": "https://femcoders.factoriaf5.org/wp-content/uploads/2021/12/factoria-web.png",
+											"type": "text"
+										},
+										{
+											"key": "personalPhotos",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "favoritePhotos",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/users/follow/:user_id",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"users",
+										"follow",
+										":user_id"
+									],
+									"variable": [
+										{
+											"key": "user_id",
+											"value": "63d109edeadffdbc38baee2c"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "539"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"21b-UzAQ5CTGy+J+BLlwXK/oxlzvcEc\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Jan 2023 12:33:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"63d1035e57847d4fe1e7c9c2\",\n    \"username\": \"goblin729\",\n    \"email\": \"goblin729@gmail.com\",\n    \"password\": \"$2a$10$MXUmVG88XQt4E9jJhuzqj.Ynz03PkkOmFSQIOhMOcWaIjCmtXEFUC\",\n    \"avatar\": \"https://d.newsweek.com/en/full/2144443/mick-grumpy-cat-20-kitten.png?w=1600&h=1600&q=88&f=93167740fdd6f9a86a9c50ccccc27f7a\",\n    \"personalPhotos\": [\n        \"63d24cc643cf6994cfc7cdae\"\n    ],\n    \"favoritePhotos\": [\n        \"63d1108d408c23d049b06c83\"\n    ],\n    \"createdAt\": \"2023-01-25T10:24:30.157Z\",\n    \"updatedAt\": \"2023-01-26T12:33:36.942Z\",\n    \"__v\": 0,\n    \"friends\": [\n        \"63d2456490c1931df3cfde10\",\n        \"63d109edeadffdbc38baee2c\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Unfollow User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlheWlAZ21haWwuY29tIiwiaWF0IjoxNjc0OTk3MTY3LCJleHAiOjE2NzUxNjk5NjcsInN1YiI6IjYzZDI5MTY0ZTBkN2I5YzlkNmIzM2FkYSJ9.wJAlSFHyJNhDWj07jtoz_Od385xzgSxrd6Px48fKg3k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "factoriaF5",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "factoriaF5@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "avatar",
+									"value": "https://femcoders.factoriaf5.org/wp-content/uploads/2021/12/factoria-web.png",
+									"type": "text"
+								},
+								{
+									"key": "personalPhotos",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "favoritePhotos",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/users/unfollow/:user_id",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"users",
+								"unfollow",
+								":user_id"
+							],
+							"variable": [
+								{
+									"key": "user_id",
+									"value": "63d66a45243a88b7028c1992"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful User Unfollow",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "factoriaF5",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "factoriaF5@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "avatar",
+											"value": "https://femcoders.factoriaf5.org/wp-content/uploads/2021/12/factoria-web.png",
+											"type": "text"
+										},
+										{
+											"key": "personalPhotos",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "favoritePhotos",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/users/unfollow/:user_id",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"users",
+										"unfollow",
+										":user_id"
+									],
+									"variable": [
+										{
+											"key": "user_id",
+											"value": "63d109edeadffdbc38baee2c"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "512"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"200-1G/y2aolawvOO+UYPUGGHzG+/Dg\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Jan 2023 12:24:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"63d1035e57847d4fe1e7c9c2\",\n    \"username\": \"goblin729\",\n    \"email\": \"goblin729@gmail.com\",\n    \"password\": \"$2a$10$MXUmVG88XQt4E9jJhuzqj.Ynz03PkkOmFSQIOhMOcWaIjCmtXEFUC\",\n    \"avatar\": \"https://d.newsweek.com/en/full/2144443/mick-grumpy-cat-20-kitten.png?w=1600&h=1600&q=88&f=93167740fdd6f9a86a9c50ccccc27f7a\",\n    \"personalPhotos\": [\n        \"63d24cc643cf6994cfc7cdae\"\n    ],\n    \"favoritePhotos\": [\n        \"63d1108d408c23d049b06c83\"\n    ],\n    \"createdAt\": \"2023-01-25T10:24:30.157Z\",\n    \"updatedAt\": \"2023-01-26T12:24:57.893Z\",\n    \"__v\": 0,\n    \"friends\": [\n        \"63d2456490c1931df3cfde10\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/users/delete/:user_id",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"users",
+								"delete",
+								":user_id"
+							],
+							"variable": [
+								{
+									"key": "user_id",
+									"value": "63d10ee1502329bfca785618"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful delete query",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/users/delete/:user_id",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"users",
+										"delete",
+										":user_id"
+									],
+									"variable": [
+										{
+											"key": "user_id",
+											"value": "63d10ee1502329bfca785618"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "453"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1c5-GuZIycdw/Qe7niN3Z/QfC2H62P4\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jan 2023 11:13:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"63d10ee1502329bfca785618\",\n    \"username\": \"vaquita\",\n    \"email\": \"vaquita@gmail.com\",\n    \"password\": \"$2a$10$BmXSozCp4YFIxewlGvWGJu7u8MtieyXMlzLPwYB4ii2gr/Jr5aYHi\",\n    \"avatar\": \"https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1143&q=80\",\n    \"personalPhotos\": [],\n    \"favoritePhotos\": [],\n    \"createdAt\": \"2023-01-25T11:13:37.038Z\",\n    \"updatedAt\": \"2023-01-25T11:13:37.038Z\",\n    \"__v\": 0\n}"
+						},
+						{
+							"name": "Invalid Mongo Id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/users/delete/:user_id",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"users",
+										"delete",
+										":user_id"
+									],
+									"variable": [
+										{
+											"key": "user_id",
+											"value": "63d10ee1502329bfca78"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "45"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2d-3QYa+Pmlg5jbx9JCrkCAg2a7UsI\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jan 2023 11:39:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"err\": \"Sorry, this is not a valid Mongo Id\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "Jadde\n",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "Yayi@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "avatar",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/auth/create",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"auth",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful user signup",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "goblin729",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "goblin729@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "1234",
+											"type": "text"
+										},
+										{
+											"key": "avatar",
+											"value": "https://d.newsweek.com/en/full/2144443/mick-grumpy-cat-20-kitten.png?w=1600&h=1600&q=88&f=93167740fdd6f9a86a9c50ccccc27f7a",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/auth/create",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"auth",
+										"create"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "421"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1a5-RgnxkuPB5xGNd6pK6xXGEBCEB3M\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jan 2023 10:07:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"username\": \"goblin729\",\n    \"email\": \"goblin729@gmail.com\",\n    \"password\": \"$2a$10$awmcXP.O1JGpOXxJwONWdOQup653mgPc37tpDMeJ5iKP.vaMEKwtS\",\n    \"avatar\": \"https://d.newsweek.com/en/full/2144443/mick-grumpy-cat-20-kitten.png?w=1600&h=1600&q=88&f=93167740fdd6f9a86a9c50ccccc27f7a\",\n    \"personalPhotos\": [],\n    \"favoritePhotos\": [],\n    \"_id\": \"63d0ff59c9c8889bd4827eb2\",\n    \"createdAt\": \"2023-01-25T10:07:21.927Z\",\n    \"updatedAt\": \"2023-01-25T10:07:21.927Z\",\n    \"__v\": 0\n}"
+						},
+						{
+							"name": "Empty email example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "goblin7295",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "1234",
+											"type": "text"
+										},
+										{
+											"key": "avatar",
+											"value": "https://d.newsweek.com/en/full/2144443/mick-grumpy-cat-20-kitten.png?w=1600&h=1600&q=88&f=93167740fdd6f9a86a9c50ccccc27f7a",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/auth/create",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"auth",
+										"create"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"29-J3eeKDk0OTr5q3Ic4ceL6QXo/tk\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jan 2023 10:26:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"err\": \"Please, enter email or password\"\n}"
+						},
+						{
+							"name": "Empty password example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "goblin7295",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "goblin729@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "avatar",
+											"value": "https://d.newsweek.com/en/full/2144443/mick-grumpy-cat-20-kitten.png?w=1600&h=1600&q=88&f=93167740fdd6f9a86a9c50ccccc27f7a",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/auth/create",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"auth",
+										"create"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"29-J3eeKDk0OTr5q3Ic4ceL6QXo/tk\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jan 2023 10:26:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"err\": \"Please, enter email or password\"\n}"
+						},
+						{
+							"name": "Invalid email structure",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "goblin7295",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "goblin7290",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "1234",
+											"type": "text"
+										},
+										{
+											"key": "avatar",
+											"value": "https://d.newsweek.com/en/full/2144443/mick-grumpy-cat-20-kitten.png?w=1600&h=1600&q=88&f=93167740fdd6f9a86a9c50ccccc27f7a",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/auth/create",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"auth",
+										"create"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "30"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1e-ZOaY7Bl3WtHZW1AIvEEtOA/N/Mo\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jan 2023 10:27:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"err\": \"Choose a valid email\"\n}"
+						},
+						{
+							"name": "Username already in use",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "goblin729\n",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "goblin729@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "1234",
+											"type": "text"
+										},
+										{
+											"key": "avatar",
+											"value": "https://d.newsweek.com/en/full/2144443/mick-grumpy-cat-20-kitten.png?w=1600&h=1600&q=88&f=93167740fdd6f9a86a9c50ccccc27f7a",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/auth/create",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"auth",
+										"create"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "36"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"24-beXurScCIA+WygskoPpwQyeaplg\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jan 2023 10:29:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Username already in use!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "iron@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/auth/login",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "goblin729@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "1234",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/auth/login",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "214"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d6-swmb5z/nfB5X+qPKokK6dkxMdQk\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jan 2023 10:40:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvYmxpbjcyOUBnbWFpbC5jb20iLCJpYXQiOjE2NzQ2NDMyNTQsImV4cCI6MTY3NDgxNjA1NCwic3ViIjoiNjNkMTAzNWU1Nzg0N2Q0ZmUxZTdjOWMyIn0.lxgGWnLV8oeQI8GKzlWAbKOPvZ5VXktCvE0jJIWtlIo\""
+						},
+						{
+							"name": "Empty password attempt",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "goblin729@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/auth/login",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"29-J3eeKDk0OTr5q3Ic4ceL6QXo/tk\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jan 2023 10:41:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"err\": \"Please, enter email or password\"\n}"
+						},
+						{
+							"name": "Empty email attempt",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "1234",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/auth/login",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"29-J3eeKDk0OTr5q3Ic4ceL6QXo/tk\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jan 2023 10:42:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"err\": \"Please, enter email or password\"\n}"
+						},
+						{
+							"name": "Wrong email attempt",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "goblin@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "1234",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/auth/login",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "21"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"15-ew5YJ7eb2GQ61E+xVtO8p226kqQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jan 2023 10:44:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"err\": \"Wrong email\"\n}"
+						},
+						{
+							"name": "Wrong password attempt",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "goblin@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/auth/login",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "33"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"21-oExvMYIXs/HIsQU2qU+oNqqzEt8\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Jan 2023 10:49:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"err\": \"Wrong email or password\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Comments",
+			"item": [
+				{
+					"name": "Get Commented Photo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/comments/list/:photo_id",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"comments",
+								"list",
+								":photo_id"
+							],
+							"variable": [
+								{
+									"key": "photo_id",
+									"value": "63d51a41bc5836b23ecd25b0"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Commented Photo Query",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/comments/list/:photo_id",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"comments",
+										"list",
+										":photo_id"
+									],
+									"variable": [
+										{
+											"key": "photo_id",
+											"value": "63d24cc643cf6994cfc7cdae"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "500"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1f4-WYMkKp0eb7g6mCoV/iIfLRqMXKk\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Jan 2023 11:14:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"63d24cc643cf6994cfc7cdae\",\n    \"url\": \"https://res.cloudinary.com/dagndlfhj/image/upload/v1674726598/movie-gallery/zov3uocioxqsmucqbbbn.jpg\",\n    \"comments\": [\n        {\n            \"_id\": \"63d25bc0063e9e2d0982243c\",\n            \"description\": \"jojojojojo!!!\",\n            \"author\": {\n                \"_id\": \"63d1035e57847d4fe1e7c9c2\",\n                \"username\": \"goblin729\",\n                \"avatar\": \"https://d.newsweek.com/en/full/2144443/mick-grumpy-cat-20-kitten.png?w=1600&h=1600&q=88&f=93167740fdd6f9a86a9c50ccccc27f7a\"\n            },\n            \"createdAt\": \"2023-01-26T10:53:52.323Z\"\n        }\n    ],\n    \"createdAt\": \"2023-01-26T09:49:58.225Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Commented Photo Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/comments/getComment/:comment_id",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"comments",
+								"getComment",
+								":comment_id"
+							],
+							"variable": [
+								{
+									"key": "comment_id",
+									"value": "63d51f5dbc5836b23ecd2617"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlheWlAZ21haWwuY29tIiwiaWF0IjoxNjc0OTEwMjM5LCJleHAiOjE2NzUwODMwMzksInN1YiI6IjYzZDI5MTY0ZTBkN2I5YzlkNmIzM2FkYSJ9.mNFeYYSjNiRourgymcvUQgVGTz7B16o2DZILcT6gnQs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "description",
+									"value": "qué tal?!",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/comments/create/:photo_id",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"comments",
+								"create",
+								":photo_id"
+							],
+							"variable": [
+								{
+									"key": "photo_id",
+									"value": "63d51a41bc5836b23ecd25b0"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Comment Creation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "description",
+											"value": "Jijijijijijij",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/comments/create/:photo_id",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"comments",
+										"create",
+										":photo_id"
+									],
+									"variable": [
+										{
+											"key": "photo_id",
+											"value": "63d24cc643cf6994cfc7cdae"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "323"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"143-fEkXJ/2gJs33FzP2MABr6rNeliU\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Jan 2023 11:14:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"63d24cc643cf6994cfc7cdae\",\n    \"url\": \"https://res.cloudinary.com/dagndlfhj/image/upload/v1674726598/movie-gallery/zov3uocioxqsmucqbbbn.jpg\",\n    \"comments\": [\n        \"63d25bc0063e9e2d0982243c\",\n        \"63d26046b0900f4ece516f9c\",\n        \"63d260924892612c56a4ea14\"\n    ],\n    \"createdAt\": \"2023-01-26T09:49:58.225Z\",\n    \"updatedAt\": \"2023-01-26T11:14:26.950Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit Comment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "description",
+									"value": "jejejejeje",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/comments/edit/:comment_id",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"comments",
+								"edit",
+								":comment_id"
+							],
+							"variable": [
+								{
+									"key": "comment_id",
+									"value": "63d25bc0063e9e2d0982243c"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Comment Edit",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "description",
+											"value": "jojojojojo!!!",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/comments/edit/:comment_id",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"comments",
+										"edit",
+										":comment_id"
+									],
+									"variable": [
+										{
+											"key": "comment_id",
+											"value": "63d25bc0063e9e2d0982243c"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "186"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ba-wnVBNMgzgZ6R76Oa0i8D9z71TNo\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Jan 2023 11:11:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"63d25bc0063e9e2d0982243c\",\n    \"description\": \"jojojojojo!!!\",\n    \"author\": \"63d1035e57847d4fe1e7c9c2\",\n    \"createdAt\": \"2023-01-26T10:53:52.323Z\",\n    \"updatedAt\": \"2023-01-26T11:11:23.259Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Comment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/comments/delete/:comment_id/:photo_id",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"comments",
+								"delete",
+								":comment_id",
+								":photo_id"
+							],
+							"variable": [
+								{
+									"key": "comment_id",
+									"value": "63d524d1fbd2f2bcba92ce11"
+								},
+								{
+									"key": "photo_id",
+									"value": "63d51a41bc5836b23ecd25b0"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Comment Delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/comments/delete/:comment_id/:photo_id",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"comments",
+										"delete",
+										":comment_id",
+										":photo_id"
+									],
+									"variable": [
+										{
+											"key": "comment_id",
+											"value": "63d260924892612c56a4ea14"
+										},
+										{
+											"key": "photo_id",
+											"value": "63d24cc643cf6994cfc7cdae"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "296"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"128-+fhGUhqAsbhhA1/V4bW/3WbZAQA\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 26 Jan 2023 11:14:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"63d24cc643cf6994cfc7cdae\",\n    \"url\": \"https://res.cloudinary.com/dagndlfhj/image/upload/v1674726598/movie-gallery/zov3uocioxqsmucqbbbn.jpg\",\n    \"comments\": [\n        \"63d25bc0063e9e2d0982243c\",\n        \"63d26046b0900f4ece516f9c\"\n    ],\n    \"createdAt\": \"2023-01-26T09:49:58.225Z\",\n    \"updatedAt\": \"2023-01-26T11:14:36.101Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "https://picky.fly.dev/api"
+		}
+	]
+}
