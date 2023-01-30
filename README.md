@@ -1,9 +1,13 @@
 # PICKY: Una aplicación de fotos creada usando el Stack MERN
 
+Picky es una red social donde los usuarios pueden subir, compartir, comentar y ver fotos de otros usuarios.
+
 # API desplegada
 
 La API desplegada puede encontrarse en el enlace: "https://picky.fly.dev/api"
 Todas las rutas descritas en el apartado "Rutas de la aplicación" son endpoints válidos contra esta url. Así, por ejemplo "https://picky.fly.dev/api/photos/list" devuelve el conjunto de fotos de la aplicación. 
+
+La aplicación completa desplegada se puede encontrar en el siguiente enlace: "https://picky-client.vercel.app/"
 
 # Variables de Entorno
 
