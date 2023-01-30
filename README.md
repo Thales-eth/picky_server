@@ -15,16 +15,16 @@ Si el proyecto quiere correrse en local, deberá crearse un archivo .env en el d
 
 Dicho archivo deberá comprender todas estas variables de entorno:
 
-PORT
-MONGODB_URI
-ORIGIN
-CLOUDINARY_NAME
-CLOUDINARY_KEY
-CLOUDINARY_SECRET
-TOKEN_SECRET
-SALT
+1. PORT
+2. MONGODB_URI
+3. ORIGIN
+4. CLOUDINARY_NAME
+5. CLOUDINARY_KEY
+6. CLOUDINARY_SECRET
+7. TOKEN_SECRET
+8. SALT
 
-Por motivos obvios de seguridad, no
+Por motivos obvios de seguridad, no se indican los valores de estas variables de entorno. Si por motivos de testeo se quiere lanzar el proyecto en local, estoy encantado de compartir los valores usados en mi proyecto local. 
 
 Para instalar todas las dependencias utilizadas en el proyecto, simplemente se ha de ejecutar el comando:
 ```
