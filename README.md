@@ -17,12 +17,12 @@ Dicho archivo deberá comprender todas estas variables de entorno:
 
 PORT
 MONGODB_URI
-ORIGIN=
-CLOUDINARY_NAME=dagndlfhj
-CLOUDINARY_KEY=757522413371486
-CLOUDINARY_SECRET=Dt2FGZVbzRlG0BDajumBX-z_q0g
-TOKEN_SECRET=supersecreto
-SALT=10
+ORIGIN
+CLOUDINARY_NAME
+CLOUDINARY_KEY
+CLOUDINARY_SECRET
+TOKEN_SECRET
+SALT
 
 Por motivos obvios de seguridad, no
 
