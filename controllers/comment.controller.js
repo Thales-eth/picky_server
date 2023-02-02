@@ -7,6 +7,7 @@ const getCommentedPhoto = (req, res, next) => {
 
     Photo
         .findById(photo_id)
+        .populate("author")
         .populate("comments")
         .populate({
             path: "comments",
