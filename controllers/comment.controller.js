@@ -66,7 +66,6 @@ const editComment = (req, res, next) => {
 const deleteComment = (req, res, next) => {
     const { comment_id } = req.params
     const { photo_id } = req.params
-    console.log("LA ID=>", photo_id)
 
     Comment
         .findByIdAndDelete(comment_id)

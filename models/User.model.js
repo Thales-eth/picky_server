@@ -1,23 +1,31 @@
 const { Schema, model } = require("mongoose");
+const bcrypt = require('bcryptjs')
 
 const userSchema = new Schema(
   {
     username: {
       type: String,
-      required: true,
-      unique: true,
+      required: [true, "A username is needed!"],
+      unique: [true, "Username already in use"],
       trim: true
     },
     email: {
       type: String,
-      required: true,
-      unique: true,
+      required: [true, "An email is needed"],
+      unique: [true, "Email already in use"],
       lowercase: true,
-      trim: true
+      trim: true,
+      validate: {
+        validator: (email) => {
+          const regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
+          return email.match(regex)
+        },
+        message: "Choose a valid email"
+      }
     },
     password: {
       type: String,
-      required: true,
+      required: [true, "A password is needed!"],
     },
     avatar: {
       type: String,
@@ -32,6 +40,19 @@ const userSchema = new Schema(
     timestamps: true
   }
 );
+
+userSchema.pre("save", function (next) {
+
+  bcrypt
+    .genSalt(+process.env.SALT)
+    .then(salt => {
+      let hashedPwd = bcrypt.hashSync(this.password, salt)
+      if (!this.password) hashedPwd = ""
+      this.password = hashedPwd
+    })
+
+  next()
+})
 
 const User = model("User", userSchema);
 
