@@ -3,7 +3,6 @@ const { validateToken } = require('../middleware/validateToken.middleware')
 const { getUsers, getFriendsPhotos, getFriends, getOneUser, getLoggedUser, editUser, followUser, unfollowUser, editLikes, dislikePhoto, deleteUser } = require("../controllers/user.controller")
 
 router.get('/list', getUsers)
-// CREAR UNA RUTA PARA MOSTRAR SOLO LAS FOTOS DE MIS AMIGOS
 router.get('/list/friendsPhotos', validateToken, getFriendsPhotos)
 router.get('/friends/:user_id', getFriends)
 router.get('/getOneUser/:user_id', getOneUser)

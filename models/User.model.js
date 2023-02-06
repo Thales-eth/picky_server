@@ -6,26 +6,24 @@ const userSchema = new Schema(
     username: {
       type: String,
       required: [true, "A username is needed!"],
-      unique: [true, "Username already in use"],
+      unique: true,
       trim: true
     },
     email: {
       type: String,
       required: [true, "An email is needed"],
-      unique: [true, "Email already in use"],
+      unique: true,
       lowercase: true,
       trim: true,
-      validate: {
-        validator: (email) => {
-          const regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
-          return email.match(regex)
-        },
-        message: "Choose a valid email"
-      }
+      match: [/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
+        "Choose a valid email"
+      ]
     },
     password: {
       type: String,
       required: [true, "A password is needed!"],
+      minLength: 1,
+      match: [/^(?=.*[0-9]).{8,}$/, "Password must be 8 characters long and contain at least one number"]
     },
     avatar: {
       type: String,
@@ -47,7 +45,6 @@ userSchema.pre("save", function (next) {
     .genSalt(+process.env.SALT)
     .then(salt => {
       let hashedPwd = bcrypt.hashSync(this.password, salt)
-      if (!this.password) hashedPwd = ""
       this.password = hashedPwd
     })
 

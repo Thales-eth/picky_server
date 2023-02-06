@@ -4,7 +4,7 @@ module.exports = (app) => {
     return
   });
 
-  app.use((err, req, res, next) => {
+  app.use((err, req, res, _next) => {
     console.error("ERROR", req.method, req.path, err)
 
     if (err.code === 11000) {
