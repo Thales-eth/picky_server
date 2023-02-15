@@ -13,6 +13,7 @@ const userSchema = new Schema(
       type: String,
       required: [true, "An email is needed"],
       unique: true,
+      minLength: 1,
       lowercase: true,
       trim: true,
       match: [/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
@@ -46,9 +47,9 @@ userSchema.pre("save", function (next) {
     .then(salt => {
       let hashedPwd = bcrypt.hashSync(this.password, salt)
       this.password = hashedPwd
+      next()
     })
-
-  next()
+    .catch(err => next(err))
 })
 
 const User = model("User", userSchema);
