@@ -52,6 +52,10 @@ userSchema.pre("save", function (next) {
     .catch(err => next(err))
 })
 
+userSchema.methods.comparePassword = function (plainPwd) {
+  return bcrypt.compareSync(plainPwd, this.password)
+}
+
 const User = model("User", userSchema);
 
 module.exports = User;

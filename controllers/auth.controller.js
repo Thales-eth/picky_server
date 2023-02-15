@@ -26,14 +26,9 @@ const login = (req, res, next) => {
         .findOne({ email })
         .then(user => {
 
-            if (!user) {
-                res.status(400).json({ err: ["Wrong email or password"] })
-                return
-            }
+            const { _id: userId, email } = user
 
-            const { _id: userId, email, password: hashedPwd } = user
-
-            if (!bcrypt.compareSync(plainPwd, hashedPwd)) {
+            if (!user || !user.comparePassword(plainPwd)) {
                 res.status(400).json({ err: ["Wrong email or password!"] })
                 return
             }
